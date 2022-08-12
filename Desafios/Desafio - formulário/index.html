@@ -16,28 +16,35 @@
 <body>
   <div class="page">
 
-    <haeder> 
-      <h1> MENTORIA </h1>
-      
-      <p> Preencha o formulário abaixo para agendar a sua mentoria </p>
-    </haeder>
-    
-    <form>
+    <div id="header">
 
-      
+      <header> 
+        <h1> MENTORIA </h1>
+        
+        <p> Preencha o formulário abaixo para </br> agendar a sua mentoria </p>
+      </header>
+    </div>
+    
+    <form id="my-form">
+
       <fieldset>
         <div id="sessao1"> 
           <legend>Informações pessoais</legend>
 
-          <div class="input-information">
-            <label for="name">Nome</label>
-            <input id="name" type="text">
-          </div>
+          <div class="line"></div>
 
+          <div id="name-lastname-container">
 
-          <div class="input-information">
-            <label for="lastname">Sobrenome</label>
-            <input id="lastname" type="text">
+            <div class="input-information">
+              <label for="name">Nome</label>
+              <input id="name" type="text">
+            </div>
+
+            <div class="input-information">
+              <label for="lastname">Sobrenome</label>
+              <input id="lastname" type="text">
+            </div>
+
           </div>
 
           <div class="input-information">
@@ -46,7 +53,7 @@
           </div>
 
           <div class="input-information">
-            <label for="password">Senha</label>
+            <label for="password">Senha<span> (mínimo de 6 caracteres)</span></label>
             <input id="password" type="password">
           </div>
 
@@ -57,8 +64,10 @@
         <div id="sessao2"> 
           <legend>Informações do mentor</legend>
 
+          <div class="line"></div>
+
           <div class="input-information">
-            <label for="mentor-name">Nome do seu mentor<span>(só o primeiro nome)</span></label>
+            <label for="mentor-name">Nome do seu mentor<span> (só o primeiro nome)</span></label>
             <input id="mentor-name" type="text">
           </div>
         
@@ -70,58 +79,63 @@
         <div id="sessao3"> 
           <legend>Seus horários disponíveis</legend>
 
+          <div class="line"></div>
+
           <legend class="second-legend"> Primeira mentoria </legend>
 
-          <div class="input-information">
-            <label for="mentorship-date">Data</label>
-            <input id="mentorship-date" type="date">
+          <div id="segundamentoria-datesinputs-container">
+
+            
+            <div id="date1-container"class="input-information">
+              <label for="mentorship-date">Data <span>(DD/MM/AAAA)</span></label>
+              <input id="mentorship-date" type="date">
+            </div>
+            
+            
+            <div id="das1-container" class="input-information">
+              <label for="mentorship-time">Das</label>
+              <input id="mentorship-time" type="time">
+            </div>
+            
+            <div id="ate1-container" class="input-information">
+              <label for="mentorship-time">Até</label>
+              <input id="mentorship-time" type="time">
+            </div>
+            
           </div>
-
-
-          <div class="input-information">
-            <label for="mentorship-time">Das</label>
-            <input id="mentorship-time" type="time">
-          </div>
-
-          <div class="input-information">
-            <label for="mentorship-time">Até</label>
-            <input id="mentorship-time" type="time">
-          </div>
-
           
 
           <legend class="second-legend"> Segunda mentoria </legend>
 
-          <div class="input-information">
-            <label for="mentorship-date">Data</label>
-            <input id="mentorship-date" type="date">
-          </div>
+          <div id="segundamentoria-datesinputs-container">
+
+            <div id="date2-container" class="input-information">
+              <label for="mentorship-date">Data <span>(DD/MM/AAAA)</span></label>
+              <input id="mentorship-date" type="date">
+            </div>
 
 
-          <div class="input-information">
-            <label for="mentorship-time">Das</label>
-            <input id="mentorship-time" type="time">
-          </div>
+            <div id="das2-container" class="input-information">
+              <label for="mentorship-time">Das</label>
+              <input id="mentorship-time" type="time">
+            </div>
 
-          <div class="input-information">
-            <label for="mentorship-time">Até</label>
-            <input id="mentorship-time" type="time">
-          </div>
+            <div id="ate2-container" class="input-information">
+              <label for="mentorship-time">Até</label>
+              <input id="mentorship-time" type="time">
+            </div>
+
+        </div>
 
         </div>
       </fieldset>
       
-
-
-
-
-
     </form>
-
   </div>
 
   <footer>
     <button>SALVAR</button>
+    
   </footer>
 
 </body>
