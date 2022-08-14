@@ -3,8 +3,9 @@ body {
   background: #EFEFEF; ;
 }
 
-/* body::before {
+body::before {
   content: '';
+  background: #535971;
   width: 100%;
   height: 436px;
 
@@ -12,38 +13,29 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: #535971;
-} */
+}
 
 header {
   margin: 0px auto; 
-
-
 }
 
 #header{
   width: 750px;
-  margin: 140px auto 0; background:  #535971;
-
-
+  margin: 140px auto 0; 
 }
 .page {
 width: 100%;
-
-
-}
-
-header {
 }
 
 h1 {
-  margin: 0;
   font-family: 'Staatliches';
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
   line-height: 60px;
   color: #FFFFFF;
+  margin-bottom: 18px;
+  margin-top: 0px;
 }
 
 p {
@@ -52,7 +44,10 @@ p {
   font-size: 20px;
   line-height: 30px;
   color: #FFFFFF;
+  margin-bottom: 58px;
+  margin-top: 0px;
 }
+
 #my-form {
   width: 750px;
   background: #FFFFFF;
@@ -62,6 +57,9 @@ p {
   display: flex;
   gap: 31px;
   flex-direction: column;
+  padding: 64px;
+
+  box-sizing: border-box;
 }
 
 legend {
@@ -72,10 +70,16 @@ legend {
   color: #535971;
 }
 
+#line-with-bigger-margin {
+  margin-bottom: 36px;
+}
+
 .line {
   height: 1px;
   width: 100%;
   background-color: #E6E6F0;
+  margin-top: 16px;
+  margin-bottom: 32px;
 }
 
 .input-information {
@@ -84,14 +88,22 @@ legend {
   flex: 1;
 }
 
+.margin-top, .segunda-mentoria {
+  margin-top: 16px;
+}
+
 #name-lastname-container {
   display: flex;
   justify-content: space-between;
   gap: 22px;
-
 }
+
 .second-legend {
   font-size: 20px;
+}
+
+.primeira-mentoria {
+  margin-bottom: 8px;
 }
 
 label {
@@ -100,7 +112,7 @@ label {
   font-size: 14px;
   line-height: 24px;
   color: #4E4958;
-
+  margin-bottom: 8px;
 }
 
 span {
@@ -112,8 +124,7 @@ span {
 }
 
 span:hover {
-  color: #a4a1aa;
-
+  color: #939296;
 }
 
 input {
@@ -121,23 +132,15 @@ input {
   border: 1px solid #E6E6F0;
   border-radius: 8px;
   height: 56px;
-  /* box-sizing: border-box; */
 }
 
 #segundamentoria-datesinputs-container {
   display: flex;
 }
 
-#sessao1 {
+#sessao1, #sessao2, #sessao3 {
   display: flex;
   flex-direction: column;
-  padding: 64px 64px 0 64px;
-}
-
-#sessao2, #sessao3 {
-  display: flex;
-  flex-direction: column;
-  padding: 0 64px;
 }
 
 fieldset {
@@ -168,10 +171,9 @@ footer {
   border-radius: 0px 0px 20px 20px;
   
 
-  margin: 0 auto 10px;
+  margin: 0px auto 10px;
   display: flex;
   justify-content: center;
-
 }
 
 button {
@@ -190,5 +192,9 @@ button {
   color: #FFFFFF;
 
   border: none;
+}
 
+button:hover {
+  background-color: #ae1a37;
+  cursor: pointer;
 }
