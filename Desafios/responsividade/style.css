@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ECE9FD;
+  padding: 6.0rem 2.3rem 6.6rem ;
+  font-size: 1.6rem;
+  font-family: 'Epilogue';
+}
+
+main {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 4.0rem;
+  line-height: 4.8rem;
+  color: #090039;
+
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%; /* equivalente a 10px, para fica mais fácil o cálculo de px para REM */
+}
+
+main p:first-child {  /* irá pegar apenas o primeiro p do main*/
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7158EF;
+  line-height: 3.2rem;
+
+  margin-bottom: 1.7rem;
+}
+
+h1 + p { /*pegando o p que tenha anteriormente a ele, um h1 */
+  color: rgba(10, 0, 57, 0.64);
+  line-height: 3.2rem;
+
+  margin-bottom: 3.2rem;
+  font-weight: 800;
+}
+
+a {
+  line-height: 3.2rem;
+  color: #090039;
+
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+ul {
+  margin-top:  7.2rem;
+}
+
+ul li {
+  font-family: 'Epilogue';
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #090039;
+
+  max-width: 25.7rem;
+
+  display: flex;
+  gap: 3.8rem;
+    
+}
+
+ul li + li { /* ul li seguido de li - vai pegar todos os li que tem um li antes */
+  margin-top: 3.2rem; /*para dar os espaçamentos entre os números*/
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.0rem;
+  letter-spacing: -2px;
+
+  color: #090039;
+}
+
+/* media queries, impõe limites de mudança para quando eu estiver numa tela maior, fazendo ajustes.*/
+
+@media (min-width: 700px){ /*quando a largura minima de 700px for atentida, as alterações que seguem abaixo serão feitas */
+
+  body {
+    padding: 8rem; /*para dar um espaçamento nas bordas na tela grande*/
+  }
+
+  main {
+    max-width: 1020px; /* Ajuste da largura maxima quando entrar nas telas grandes, acima de 700px como eu defini */
+    display: flex;
+    gap: 10em
+  }
+
+  main > div { /* primeiro nivel de div dentro do main */
+    max-width: 484px;
+  }
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px; /* foi definido vendo como ficava o funcionamento em telas grandes */
+    align-items: center; /* para alinhar o numero com o texto na lista */
+  }
+
+}
