@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root { /*Aqui eu coloco as variaveis que vou usar durando o código*/
+  --ff-heading: 'Epilogue', 'sans-serif'; /*font-family header*/
+  --ff-texting: 'Open sans', 'sans-serif';
+
+  --hue: 250;
+  --bg-primary: hsl(var(--hue), 22%, 20%);
+  --fc-primary: hsl(var(--hue),0%,100%);
+  --fc-secondary: hsl(var(--hue), 50%, 80%);
+  --fc-secondary-dark: hsl(var(--hue), 100%, 11%);
+
+  font-size: 62.5%;
+  --fs-body:1.6rem;
+  --fs-heading:clamp(4rem, 1rem + 5vw, 5.6rem); /* a função tem como argumentos os valores min, ideal e o valor max que eu aceito nessa fonte */
+  --fs-heading-sm:clamp(3rem, 0.5rem + 3vw, 4rem); 
+} /* o valor do meio é um calculo para melhor ajustar de acordo com as telas. sempre que modificar a largura da janela em vw ele vai somar a 1rem  */
+
+body {
+  font-family: var(--ff-texting);
+
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+  
+  font-size: var(--fs-body);
+}
+
+.page {
+  max-width: clamp(33rem, 30rem + 60vw, 117rem);
+  padding: 0 5rem;
+  margin: 0 auto;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  margin: 10rem 0 8rem;
+  font-family: var(--ff-heading); /*usando a variável*/
+
+  text-align: center;
+
+  /*quando a animação acaba, ela volta ao ponto original do header com opacidade 1 e translate 0 */
+  animation-name: topdown;
+  animation-duration: 700ms; /*Duração da animação */
+}
+
+header p {
+  color: var(--fc-secondary);
+  text-transform: uppercase;
+
+  line-height: 3.2rem;
+  letter-spacing: 3px;
+
+  font-weight: 400;
+  
+  margin-bottom: 1.7rem;
+}
+
+header h1 {
+  font-weight: 800;
+  line-height: 4.8rem;
+  font-size: var(--fs-heading);
+}
+
+
+main {
+  display: grid;
+  gap: 3.2rem;
+
+  padding-bottom: 10rem;
+  animation: downtop 700ms 350ms backwards; /* usando backwards por causa do delay que foi colocado, para voltar as propriedades originais do main dps da animação terminar */
+}
+
+
+.card {
+  position: relative; /* faz com que o position absolute seja relativo ao cartão */
+}
+
+.card img {
+  height: 41.6rem;
+  object-fit: cover;
+  border-radius: 6px;
+
+  transition: all 200ms;
+  filter: brightness(0.5) saturate(1.5);
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+
+.card h2 {
+  position: absolute;
+  bottom: 5.3rem;
+  left: 2.1rem;
+
+  font-size: var(--fs-heading-sm);
+  font-weight: 800;
+  color: var(--ff-heading);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+
+}
+
+.card h2 span {
+  border-radius: 2rem;
+  background-color: var(--fc-primary);
+  font-size: var(--fs-body);
+  color: var(--fc-secondary-dark);
+
+  font-weight: 400;
+  padding: 0 1.6rem;
+  height: 3.8rem;
+  font-family: var(--ff-heading);
+
+  display: inline-flex;
+  align-items: center;
+  width: fit-content; /* fazer com que o h2 span se encaixe no tamanho do conteudo */
+}
+
+@keyframes topdown { /* responsavel pelas animações no css*/
+  0% { /* no 0% ficam as propriedades que eu quero que iniciem nelas */
+    opacity: 0;
+    transform: translateY(-15px); /* translate Y significa mexer certo elemento no sentido do eixo y, como tá -15 irá mover para cima */
+  }
+
+  100% { /* o 100% indica as propriedades nas quais a animação irá terminar */
+    opacity: 1;
+    transform: translateY(0); /* como o translate y = 0, irá voltar para a posição original */
+  }
+
+} 
+
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+@media (min-width: 700px) {
+  
+  main {
+    grid-template-columns: 1fr 1fr; /* fr é outro jeito de dizer pra ficar 50% 50% */
+  }
+
+}
+
+@media (min-width: 930px) { /* coisas que irao acontecer numa tela de 930px pra cima */
+
+  main {
+    grid-template-areas: "A B B"
+    "C C D"; /*nome dos espaços do grid, os repetidos terão 2 espaços no grid, uma área maior*/
+    
+  }
+  
+  main div:nth-child(1) /*div numero 1, definindo a area correspondente a div 1*/ {
+    grid-area: A;
+  }
+
+  main div:nth-child(2) /*div numero 2 */ {
+    grid-area: B;
+  }
+
+  main div:nth-child(3) /*div numero 3 */ {
+    grid-area: C;
+  }
+
+  main div:nth-child(4) /*div numero 4 */ {
+    grid-area: D;
+  }
+}
+
+
+/* Outras opções de animação :
+
+animaton-fill-mone: forwards; - significa que a animação irá terminar com as propriedes do 100% / se for backwards eu faço com que as propriedades do ponto 0 se tornem as propriedades padrão do meu elemento 
+animation-direction: reverse; - Começa no 100% e termina no 0%, a animação fica ao contrário
+animation-delay: 200ms; - A animação demora 200ms para começar
+animation-timing-function: ease; - Animação se comporta de acordo com as curvas bezier
+animation-iteration-count: infinite; - A animação fica acontecendo o tempo todo
+animation-play-state: paused; - A animação começa pausada, ai seria necessário colocar um hover no header para ela começar quando passar o mouse por cima
+
+por exemplo: 
+
+header:hover {
+  animation-play-state: running;
+}
+
+uma forma curta de colocar a animação é: 
+
+header {
+  animation: topdown 700ms 350ms reverse; sendo: nome-duração-delay-direction 
+
+}
+*/ 
