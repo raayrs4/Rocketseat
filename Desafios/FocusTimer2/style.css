@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --bg-color: #FFFFFF;
+  --text-color: #323238;
+  --svgcolor: #E1E1E6;
+  --svg-second-color: black;
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  font-family: 'Roboto', sans-serif;
+
+  display: grid; /* para desbloquear funções e deixar tudo no meio*/
+  min-height: 100vh; /* para ocupar toda a tela*/
+}
+
+main {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+
+  gap: 19.2rem;
+}
+
+#controls {
+  justify-self: center;
+  align-self: center ;
+
+  font-weight: 500;
+  font-size: 12rem;
+  line-height: 14.8rem;
+
+  text-align: center;
+}
+
+#timer {
+  display: flex;
+  font-weight: 500;
+}
+
+#controls #buttons {
+  display: flex;
+  justify-content: space-between;
+  align-self: center ;
+  gap: 3rem;
+
+  margin-top: 2rem;
+}
+
+#cards {
+  display: grid;
+  grid-template-areas: "A B"
+  "C D"; /* Nome dos espaços do grid*/
+  gap: 3.2rem;
+  
+  justify-self: center;
+  align-self: center ;
+}
+
+#cards div:nth-child(1) {
+  grid-area: A;
+}
+#cards div:nth-child(2) {
+  grid-area: B;
+}
+#cards div:nth-child(3) {
+  grid-area: C;
+}
+#cards div:nth-child(4) {
+  grid-area: D;
+}
+
+
+button {
+  background-color: white;
+
+  border: none;
+  cursor: pointer;
+}
+
+.highlight {
+  --svgcolor:#02799D;
+  --svg-second-color: white;
+}
