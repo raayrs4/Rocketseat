@@ -6,9 +6,8 @@ body {
 }
 
 #hero {
-    width: 592px;
-    margin: 0px auto 72px;
-  
+  width: 592px;
+  margin: 0px auto 72px;
 }
  
 #hero img {
@@ -41,29 +40,25 @@ p, #footer {
 
 #footer a + a {
   margin-left: 28px;
-  
 }
 
 #footer a {
   text-align: center;
-  
 }
 
 #footer {
   padding-top: 8px;
-  
 }
  
 .line {
-    width: 568px;
-    height: 0px;
-    margin: 72px auto 0px;
-    border-top: 2px solid #ECEFF2; 
+  width: 568px;
+  height: 0px;
+  margin: 72px auto 0px;
+  border-top: 2px solid #ECEFF2; 
 }
 
 #balls {
-    position:fixed;
-    bottom: 0px;
-    right: 0px;
-    
+  position:fixed;
+  bottom: 0px;
+  right: 0px;
 }
