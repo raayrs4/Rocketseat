@@ -25,10 +25,9 @@ Os projetos aqui desenvolvidos usam as seguintes tecnologias:
 
 #### Projeto para mobile:
 
-![App Screenshot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/565efcff-040e-445a-a2d2-30fbdd72cc22/desafio-Space.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230217%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230217T215953Z&X-Amz-Expires=86400&X-Amz-Signature=71aa72c0ee0b1e5d8ec4195609e8aca6d777e9a131cb6e89d042f553ce58d107&X-Amz-SignedHeaders=host&x-id=GetObject)
+![App Screenshot](https://64.media.tumblr.com/8684dd3dbba5337297cf16a061829a31/fd41b9df86aeae32-b2/s640x960/f0fd77a7cdf5d33e60dbdd07c6da39248044b9e0.gifv)
 
 Como você pode ver, a ideia aqui é: ao carregar a tela as imagens sobem enquanto os tipos de sorvete descem.
-
 
 #### Projeto para desktop:
 
