@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'roboto', 'sans-serif';
+  --text-color: #E1E1E6;
+  --bg-primary-color: #000000;
+  --bg-secondary-color: #06181C;
+}
+
+body {
+  font-size: 2rem;
+  color: var(--text-color);
+  background-color: var(--bg-primary-color);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+.sr-only { /* screen reader only, posso usar em muitos projetos pra esconder um texto do usuário mas o que o leitor de tela ainda consiga ler para acessibilidade*/
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden; /*pra evitar o transbordamento da caixa, pra ficar dentro do 1px da altura e largura*/
+  clip: rect(0, 0, 0, 0); /* estou criando um retângulo de dimensões 0, para forçar que minha caixa não apareça*/
+  white-space: nowrap; /* não permite que ele quebre a linha*/
+  border-width: 0;
+}
+
+#app {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem ;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10rem 0 8.7rem 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 64rem;
+  justify-content: space-between;
+  height: 4.8rem;
+}
+
+.search input {
+  max-width: 46.2rem;
+  height: 4.8rem;
+  background-color: var(--bg-secondary-color);
+  border-color: var(--bg-secondary-color);
+  border-radius: 0.5rem;
+}
+
+.text-input{
+  width:46.2rem;
+  padding: 2rem;
+  color: white;
+  background-color: #06181C;
+}
+
+.search button {
+  height: 4.8rem;
+  width: 17rem;
+
+  background-color: var(--bg-primary-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.search button:hover {
+  filter: brightness(1.1);
+}
+
+table {
+  width: 100%;
+  border: 0.05rem solid #4A808C;
+  border-radius: 1.2rem;
+  border-spacing: 0;
+}
+
+table {
+  border-bottom-left-radius: 1.2rem;
+}
+
+table * {
+  font-size: 2rem;
+  color: #E1E1E6;
+}
+
+table th {
+  background-color: #092D38;
+  text-align: left;
+  font-weight: 400;
+  padding: 1.6rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 1.2rem;
+  
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 1.2rem;
+}
+
+/* table tr:nth-child(even){ efeito zebrado
+  border: 0.05rem solid #4A808C;
+} */
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+td.user p {
+  font-weight: bold;
+}
+
+td .user .wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+td .remove{
+  background: none;
+  border: none;
+  
+  color: #F75A68;
+  cursor: pointer;
+}
+
