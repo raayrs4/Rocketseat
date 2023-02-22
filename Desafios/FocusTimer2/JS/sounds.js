@@ -1,8 +1,8 @@
 export default function () {
-  const forestSong = new Audio("https://github.com/raayrs4/Rocketseat/blob/main/Desafios/TimerFocus/Floresta.wav?raw=true") 
-  const rainSong = new Audio("https://github.com/raayrs4/Rocketseat/blob/main/Desafios/TimerFocus - sounds/Chuva.wav?raw=true")
-  const coffeShopSong = new Audio("https://github.com/raayrs4/Rocketseat/blob/main/Desafios/TimerFocus%20-%20sounds/Cafeteria.wav?raw=true")
-  const fireplaceSong = new Audio("https://github.com/raayrs4/Rocketseat/blob/main/Desafios/TimerFocus/Lareira.wav?raw=true")
+  const forestSong = new Audio("https://github.com/raayrs4/Rocketseat/blob/main/Desafios/TimerFocus_sounds/Floresta.wav?raw=true") 
+  const rainSong = new Audio("https://github.com/raayrs4/Rocketseat/blob/main/Desafios/TimerFocus_sounds/Chuva.wav?raw=true")
+  const coffeShopSong = new Audio("https://github.com/raayrs4/Rocketseat/blob/main/Desafios/TimerFocus_sounds/Cafeteria.wav?raw=true")
+  const fireplaceSong = new Audio("https://github.com/raayrs4/Rocketseat/blob/main/Desafios/TimerFocus_sounds/Lareira.wav?raw=true")
   const kitchenTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
 
   forestSong.loop = true
