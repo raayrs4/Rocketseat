@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Github favorites</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="JS/main.js" type="module" defer></script> <!-- O defer é pra ler primeiro o html e só dps o script js-->
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Github Favorites</h1>
+      <div class="search">
+        <label class="sr-only" for="input-search">Usuário do Github</label> <!-- pensando na acessibilidade, label é uma legenda para melhorar a acessibilidade de um item de interface do usuário -->
+        <input id="input-search" type="text" placeholder="Usuário do Github">
+        <button>&plus;</button> <!-- botão com caracter especial -->
+      </div>
+    </header>
+
+    <table>
+      <thead>
+          <tr> <!-- table row - usado pra criar linhas -->
+            <th>Usuário</th> <!-- th serve pra criar as colunas -->
+            <th>Repositórios</th>
+            <th>Seguidores</th>
+            <th></th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="user">
+            <img src="https://github.com/raayrs4.png" alt="imagem de Rayane Santos">
+            <a href="https://github.com/raayrs4">
+              <p>Rayane Santos</p>
+              <span>raayrs4</span>
+            </a>
+          </td> <!-- dentro do tbody fazemos colunas com o td -->
+          <td class="repositories">
+            5
+          </td>
+          <td class="followers">
+            2
+          </td>
+          <td>
+            <button class="remove">&times;</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</body>
+</html>
