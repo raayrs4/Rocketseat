@@ -1,6 +1,6 @@
 
 
-## 💻 Projeto - Movéis Costumizados
+## 💻 Projeto - Movéis Customizados
 
 Projeto desenvolvido durante o acompanhamento das aulas da Fase 01 do programa Explorer da Rocketseat. Aplicando os seguintes conceitos:
 
