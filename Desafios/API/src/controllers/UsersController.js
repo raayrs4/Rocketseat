@@ -26,10 +26,10 @@ class UsersController { //a classe permite que dentro dela tenha várias funçõ
 
   async update(request, response) {
     const {name, email, password, old_password} = request.body
-    const {id} = request.params
+    const user_id = request.user.id;
 
     const database = await sqliteConnection()
-    const user = await database.get("SELECT * FROM users WHERE id=(?)", [id])    // pegando todos os dados do user que tem o id x, então tenho user.name, user.password...
+    const user = await database.get("SELECT * FROM users WHERE id=(?)", [user_id])    // pegando todos os dados do user que tem o id x, então tenho user.name, user.password...
 
     if(!user) {
       throw new AppError("Usuário não encontrado")
@@ -70,12 +70,11 @@ class UsersController { //a classe permite que dentro dela tenha várias funçõ
     password = ?,
     updated_at = DATETIME('now')              
     WHERE id = ?`,
-    [user.name, user.email, user.password, id]   // DATETIME('now') é uma função do banco de dados
+    [user.name, user.email, user.password, user_id]   // DATETIME('now') é uma função do banco de dados
     )
     
     return response.json()
   }
-
 }
 
 module.exports = UsersController

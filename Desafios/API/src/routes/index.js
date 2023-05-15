@@ -2,13 +2,15 @@
 
 const {Router} = require("express")
 
-const usersRoutes = require("./users.routes")
-const notesRoutes = require("./notes.routes")
-const tagsRoutes = require("./tags.routes")
+const usersRouter = require("./users.routes")
+const notesRouter = require("./notes.routes")
+const tagsRouter = require("./tags.routes")
+const sessionsRouter = require("./sessions.routes")
 
 const routes = Router()
-routes.use("/users", usersRoutes) // toda vez que o /users for acessado, ele redireciona para userRouter
-routes.use("/notes", notesRoutes) // toda vez que o /notes for acessado, ele redireciona para notesRouter
-routes.use("/tags", tagsRoutes) // toda vez que o /tags for acessado, ele redireciona para notesRouter
+routes.use("/users", usersRouter) // toda vez que o /users for acessado, ele redireciona para userRouter
+routes.use("/notes", notesRouter) // toda vez que o /notes for acessado, ele redireciona para notesRouter
+routes.use("/tags", tagsRouter) // toda vez que o /tags for acessado, ele redireciona para tagsRouter
+routes.use("/sessions", sessionsRouter) // toda vez que o /sessions for acessado, ele redireciona para sessionsRouter
 
 module.exports = routes 

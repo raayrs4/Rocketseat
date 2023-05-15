@@ -3,12 +3,14 @@
 const {Router} = require("express")  // importar o Router de dentro do express
 
 const TagsController = require("../controllers/TagsController") 
+const ensureAuthenticated = require("../middlewares/ensureAuthenticated")
+
 
 const tagsRoutes = Router() // criação da constante notesRoutes para inicializar o Route
 
 const tagsController = new TagsController()  // como NotesController é uma classe eu preciso instanciar ele na memória
 
-tagsRoutes.get("/:user_id", tagsController.index) // a rota recebe a requisição e a resposta e repassa para o controler equivalente
+tagsRoutes.get("/", ensureAuthenticated, tagsController.index) // a rota recebe a requisição e a resposta e repassa para o controler equivalente
 
 
 module.exports = tagsRoutes // exportando para permitir a utilização do arquivo
