@@ -1,4 +1,6 @@
 import { FiPlus, FiSearch } from "react-icons/fi/"
+import { useState, useEffect } from "react"
+
 import {  Container, Brand, Menu, Search, Content, NewNote} from "./styles"
 
 import { Header } from "../../components/Header"
@@ -8,6 +10,17 @@ import { Section } from "../../components/Section"
 import { Note } from "../../components/Note"
 
 export function Home(){
+  const [tags, setTags] = useState([])
+
+  
+  useEffect(() => {
+    async function fetchTags() {
+  
+    }
+
+    fetchTags() 
+  }, [])
+
   return(
     <Container>
       <Brand>
